@@ -16,11 +16,6 @@ useEffect(()=>{
   getProducts()
 },[])
 
-const getNameProducts = ()=>{
-  return <ul>
-    <li>{products[0].title}</li>
-  </ul>
-}
 
 if(products.length == 0){
     return <>
@@ -33,9 +28,7 @@ if(products.length == 0){
   return (
     <>
       <h1>Falsa Tienda Online</h1>
-      <button onClick={()=>{console.log(products)}}> Ver Producto</button>
-      {getNameProducts()}
-      <Products product={products[4]} />
+      <Products products={products} />
 
     </>
   )
